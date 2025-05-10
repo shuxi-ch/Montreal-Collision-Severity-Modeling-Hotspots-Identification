@@ -1,0 +1,13 @@
+# macOS metadata
+.DS_Store
+
+#––– Python artifacts –––
+__pycache__/
+*.py[cod]
+
+# virtual environments
+.venv/
+env/
+
+# dotenv files
+.env
