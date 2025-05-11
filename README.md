@@ -9,17 +9,24 @@ This project analyzes 218 K+ traffic collisions in Montréal (2012–2019) to un
    ```bash
 .
 ├── README.md
+├── .gitignore
 ├── data
-│   └── shark_tank.csv
-├── dictionaries
-│   ├── Hedonometer.csv               
-│   └── Loughran-McDonald_MasterDictionary_1993-2023.csv   
-├── R                                          
-│   └── Shark Tank Prediction.R               
+│   ├── raw
+│   │   └── Dataset.xlsx
+│   └── processed
+│       └── processed_df.xlsx
+├── notebooks                          
+│   ├── EDA&DataPreprocessing.ipynb
+│   ├── SMOTE Re-balancing&Collision Severity Prediction.ipynb             
+│   └── Spatial Clustering for Hotspots Identification.ipynb               
 ├── reports
-│   └── Shark Tank Prediction Report.pdf
+│   ├── INSY662 Group7_Presentation Report.pdf
+│   ├── EDA&Data Preprocessing.pdf
+│   ├── SMOTE Re-balancing&Collision Severity Prediction.pdf
+│   └── Spatial Clustering for Hotspots Identification.pdf
 └── docs
-    └── Shark tank dictionary.xlsx
+    ├── Data Dictionary & Processing Logic.xlsx 
+    └── Appendix_Target Encoded Severity Mappings.xlsx
  ```
 
 ### Problem Statement
