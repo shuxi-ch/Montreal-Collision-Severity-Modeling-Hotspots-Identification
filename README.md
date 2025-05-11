@@ -70,8 +70,6 @@ The dataset focuses on traffic accidents in Montreal, containing variables that 
 
 ### Key Findings & Policy Implications
 
-### Key Findings & Policy Implications
-
 * **Friday Rush-Hour (3 – 5 PM)**
   Both crash counts and severity peak during this window—deploy targeted speed enforcement and upgrade street lighting on Fridays between 3 PM and 5 PM.
 
