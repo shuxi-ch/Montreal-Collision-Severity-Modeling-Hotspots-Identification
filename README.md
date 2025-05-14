@@ -29,6 +29,8 @@ This project analyzes 218 K+ traffic collisions in Montréal (2012–2019) to un
     └── Appendix_Target Encoded Severity Mappings.xlsx
  ```
 
+----
+
 ### Problem Statement
 
 Severe and fatal collisions impose high human and economic costs, yet their rarity (0.82% serious, 0.12% fatal) makes them difficult to predict. Montréal’s road‐safety teams need precise, location-specific insights to prioritize infrastructure upgrades, enforcement, and public education. Our goals:
@@ -37,9 +39,13 @@ Severe and fatal collisions impose high human and economic costs, yet their rari
 2. **Enable** robust modeling of rare severe or fatal outcomes through oversampling to address extreme class imbalance, supporting more reliable multi-class prediction.
 4. **Localize** spatial clusters for targeted policy actions
 
+----
+
 ### Data Sources
 
 The dataset focuses on traffic accidents in Montreal, containing variables that track accident location, severity, and other contextual factors like weather and road conditions, with initially 218,128 rows and 50 raw columns. The dataset comes from official sources SAAQ (Société de l'assurance automobile du Québec), and it includes geographic coordinates, quality, and precision scores for accident locations on Montreal’s road network. 
+
+----
 
 ### Methodology & Key Techniques
 
@@ -67,6 +73,8 @@ The dataset focuses on traffic accidents in Montreal, containing variables that 
 * **Cluster Profiling:** For each cluster, computed center coordinates, average severity, victim counts, and modal road/surface/weather conditions.
   * Identified “damage‐only” zones (Clusters 1 & 7) in northern/commercial corridors (avg ≈ 0.91 severity), and “low‐impact” residential pockets (e.g., Cluster 6, avg ≈ 0.76).
 * **Actionable Maps:** Generated both folium‐based interactive maps and static scatter plots to visualize cluster extents, guiding local safety audits.&#x20;
+
+----
 
 ### Key Findings & Policy Implications
 
@@ -97,6 +105,8 @@ The dataset focuses on traffic accidents in Montreal, containing variables that 
 * **Road Geometry Trumps Conditions**
   Adverse weather and poor lighting play a secondary role; road design, speed, and traffic controls are the primary drivers of crash severity—focus investments accordingly.
 
+----
+
 ### Key Learnings & Challenges
 
 * **Balancing Rare Events:** Combining oversampling with noise reduction (SMOTE-ENN) is critical for multi‐severity classification.
@@ -104,7 +114,9 @@ The dataset focuses on traffic accidents in Montreal, containing variables that 
 * **Geospatial Nuance:** Pure lat/long clustering reveals non‐linear local risk patterns that improve upon raw coordinate features.
 * **Data Quality Weighting:** Converting geolocation precision metrics into a single “credibility score” allowed simplification while retaining imprecision signal.
 
-### Next Steps & Recommendations
+----
+
+### Future Enhancements
 
 1. **Predictive Modeling**: Train XGBoost/Random Forest on SMOTE-ENN data and include cluster labels as features for dynamic risk scoring.
 2. **Micro-Hotspot Analysis**: Within top clusters, sub-cluster serious/fatal cases to pinpoint street-level danger spots.
