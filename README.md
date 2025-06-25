@@ -54,7 +54,7 @@ The dataset focuses on traffic accidents in Montreal, containing variables that 
 * **Data Cleaning & Imputation:** Dropped >50%-missing features (e.g., `Work_Zone`), forward/backward–filled key categorical/time variables, and converted counts into binary indicators for presence/absence.&#x20;
 * **Temporal Patterns:** Mapped `Acc_Time`, `Weekday`, `Month`, `Year` to reveal rush-hour peaks (3–5 PM), Friday spikes, and seasonal January/February and June/July bumps.
 * **Variable Distributions & Transformations:**
-  * **Zero-inflated** count features (e.g. vehicle types) were binarized to capture involvement vs. count.
+  * **Rolling window imputation (forward-filling)** to process time-series data (accident time).
   * Continuous imaging (latitude/longitude, credibility score) and casualty counts highlighted `Total_Victims` and `Num_Veh_Invld` as strongest severity correlates.
 * **Target Encoding**: Converted high-cardinality factors—`Acc_Type`, `Street_Name`, `Road_Config`—into severity-weighted continuous features, preserving rare but dangerous categories without inflating dimensionality.
 * **Key Predictors Identified:** Time of day, accident type, total victims, road configuration, vehicle mix, and location code emerged as top signals.&#x20;
